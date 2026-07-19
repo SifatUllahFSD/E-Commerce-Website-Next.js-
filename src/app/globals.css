@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+:root {
+  --color-bg: #FBF7F3;
+  --color-surface: #FFFFFF;
+  --color-ink: #241C1A;
+  --color-ink-soft: #6B5F5A;
+  --color-accent: #9C3D52;
+  --color-accent-soft: #F3DCE1;
+  --color-gold: #B98F4E;
+  --color-border: #EAE1DA;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-inter), sans-serif;
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+
+.font-display {
+  font-family: var(--font-fraunces), serif;
+}
+
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  height: 1.5px;
+  background: var(--color-gold);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+@keyframes toast-in {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-toast-in {
+  animation: toast-in 0.3s ease-out;
+}
+
+@keyframes sheet-in {
+  from { opacity: 0; transform: translateY(-16px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.animate-sheet-in {
+  animation: sheet-in 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.animate-fade-in {
+  animation: fade-in 0.2s ease-out;
+}
