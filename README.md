@@ -27,5 +27,5 @@ Open http://localhost:3000 in your browser.
 
 
 ## Notes
-- Email: admin@hisab.app
+- Email: admin@aurelle.com
 - Password: admin123
